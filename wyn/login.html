@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			form{
+				position: absolute;
+				top:40px;
+			}
+			#title{
+				width:200px;
+				height:30px;
+				line-height:30px;
+				background: papayawhip;
+				color:red;
+				display:none;
+				text-align: center;
+				
+			}
+			#sub{
+				width: 100px;
+				height: 30px;
+				background: #84BFF9;
+			}
+			span{
+				font-size:14px;
+				color:darkgray;
+			}
+			a{
+				text-decoration: none;
+			}
+			img{
+				width:12px;
+			}
+		</style>
+	</head>
+	<body onload="getyzm()">
+		<div id="title"></div>
+		<form action="http://127.0.0.1/text0618/login.html" method="get" id="f">
+			<fieldset id="">
+				<legend>用户信息注册</legend>
+				
+				用户名<input type="text" placeholder="请输入用户名"><br><br>	
+				设置密码<input type="text" placeholder="请输入密码"><br><br>
+				确认密码<input type="text" placeholder="请输入确认密码"><br><br>
+				姓名<input type="text" placeholder="请输入真实姓名"><br><br>
+				身份证号<input type="text" placeholder="请输入身份证号"><br><br>
+				手机号<input type="text" placeholder="请输入真实手机号"><br><br>
+				验证码<input type="text" placeholder="请输入右图数字验证码"><span id="yzm"></span><br><br>
+				<input type="radio" name="agree">我同意并接受<a href="#">《用户注册协议》</a><br><br>
+				<input type="submit" value="注册" id="sub">
+			</fieldset>
+		</form>
+		
+	</body>
+</html>
+<script src="js/regExpTools.js"></script>
+<script>
+var texts=document.getElementsByTagName("input");
+var title=document.getElementById("title");
+
+//判断用户名
+var t0=false;
+texts[0].onblur=function(){
+	var str0=texts[0].value;
+	if((!test(str0,"username"))){
+		title.style.display="block";
+		title.innerHTML="用户名格式不正确";
+		texts[0].value="";
+		return;
+	}else{
+		title.style.display="none";
+		title.innerHTML="";
+		t0=true;
+	}
+}
+
+//判断密码
+var t1=false;
+texts[1].onblur=function(){
+	var str1=texts[1].value;
+	if((!test(str1,"passWord")) || (!isNaN(str1))){
+		title.style.display="block";
+		title.innerHTML="密码格式不正确";
+		texts[1].value="";
+		return;
+	}else{
+		t1=true;
+		title.style.display="none";
+		title.innerHTML="";
+	}
+}
+
+//判断确认密码
+var t2=false;
+texts[2].onblur=function(){
+	var str2=texts[2].value;
+	if(str2 != texts[1].value){
+		title.style.display="block";
+		title.innerHTML="密码输入错误";
+		texts[2].value="";
+		return;
+	}else{
+		t2=true;
+		title.style.display="none";
+		title.innerHTML="";
+	}
+}
+
+//判断姓名
+var t3=false;
+texts[3].onblur=function(){
+	var str3=texts[3].value;
+	if(!test(str3,"name")){
+		title.style.display="block";
+		title.innerHTML="姓名格式错误";
+		texts[3].value="";
+		return;
+	}else{
+		t3=true;		
+		title.style.display="none";
+		title.innerHTML="";
+	}
+}
+
+//判断身份证号
+var t4=false;
+texts[4].onblur=function(){
+	var str4=texts[4].value;
+	if(!test(str4,"idcad")){
+		title.style.display="block";
+		title.innerHTML="身份证格式错误";
+		texts[4].value="";
+		return;
+	}else{
+		t4=true;
+		title.style.display="none";
+		title.innerHTML="";
+	}
+}
+
+//判断手机号
+var t5=false;
+texts[5].onblur=function(){
+	var str5=texts[5].value;
+	if(!test(str5,"phoneNum")){
+		title.style.display="block";
+		title.innerHTML="手机号格式错误";
+		texts[5].value="";
+		return;
+	}else{
+		t5=true;
+		title.style.display="none";
+		title.innerHTML="";
+	}
+}
+
+var arr=["0","1","2","3","4","5","6","7","8","9"];
+var yzm=document.getElementById("yzm");
+var yanZheng="";//保存每张图片上显示的数字
+var index="";//存获取到的随机数
+function getyzm(){
+	yzm.innerHTML="";
+	yanZheng="";
+	for(var i=0;i<4;i++){
+		index=arr[Math.round(Math.random()*9)];
+		yzm.innerHTML+="<img src=img/expreg/"+index+".jpg>";
+		yanZheng+=index;
+	}
+	
+}
+yzm.onclick=function(){
+	getyzm();
+}
+
+
+//判断验证码
+var t6=false;
+texts[6].onblur=function(){
+	var str6=texts[6].value;
+	if(str6!=yanZheng){
+		title.style.display="block";
+		title.innerHTML="验证码错误";
+		texts[6].value="";
+		getyzm();
+		return;
+	}else{
+		t6=true;
+		title.style.display="none";
+		title.innerHTML="";
+	}
+}
+
+//判断用户是否同意注册
+var t7=false;
+texts[7].onclick=function(){
+	if(texts[7].checked){
+		t7=true;
+		title.style.display="none";
+		title.innerHTML="";
+	}else{
+		title.style.display="block";
+		title.innerHTML="请确认是否同意用户注册协议";
+		return;
+	}
+}
+
+
+var oF=document.getElementById("f");
+oF.onsubmit=function(){
+	if(t0 && t1 && t2 && t3 && t4 && t5 && t6 && t7){
+		for(var i=0;i<=6;i++){
+			texts[i].value="";
+		}
+		return true;
+	}else{
+		alert("请完善信息");
+		return false;
+	}
+}
+</script>
