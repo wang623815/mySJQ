@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>四季青服装网</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/css/swiper.min.css">
+		<link rel="stylesheet" type="text/css" href="css/base.css">
+		<link rel="stylesheet" type="text/css" href="css/index_sjq.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.min.js"></script>
+
+		<style>
+			.suspension{
+		display:none;
+		}
+	.swiper-container {
+		width: 932px;
+		height: 350px;
+		float: left;
+	} 
+	
+	</style>
+	</head>
+	<body>
+
+		<div id="site-nav">
+			<div class="w1200 dorpdown">
+				<div class="user-entry"></div>
+				<div class="ecsc-login" id="ECS_MEMBERZONE">
+					<a href="http://127.0.0.1:8848/wyn/enter.html" class="link-login style-red">会员登录</a>
+					<a href="http://127.0.0.1:8848/wyn/login.html" class="link-regist">免费注册</a>
+				</div>
+
+				<ul class="quick-menu fr">
+					<li>
+						<div class="dt"><a href="#" target="_blank">我的订单</a></div>
+					</li>
+					<li class="spacer"></li>
+					<li>
+						<div class="dt"><a href="#">我是卖家</a></div>
+					</li>
+					<li class="spacer"></li>
+					<li>
+						<div class="dt"><a href="#" target="_blank">我的浏览</a></div>
+					</li>
+
+					<li>
+						<div class="dt"><a href="#">我的收藏</a></div>
+					</li>
+
+					<li>
+						<div class="dt"><a href="#" target="_blank">联系客服</a></div>
+					</li>
+
+				</ul>
+				<div class="shopcart-2015" id="ECS_CARTINFO" data-carteveval="0">
+					<div class="ecsc-icon">
+						<i class="ecsc-left"></i>
+						<a href="#">购物车</a>
+					</div>
+					<div class="ecscup-content">
+						<div class="prompt">
+							<div class="nogoods"><b></b>购物车中还没有商品，赶紧选购吧！</div>
+						</div>
+
+					</div>
+
+
+				</div>
+			</div>
+		</div>
+
+		<div class="header w1200">
+			<div class="ecsc-logo"><a href="#" class="logo"><img src="img/logo.gif"></a></div>
+			<div class="ecsc-search">
+				<form id="searchForm" name="searchForm" method="get" action="#" onsubmit="return checkSearchForm()" class="ecsc-search-form">
+					<div class="ecsc-search-tabs">
+						<ul class="shop_search" id="shop_search">
+							<li rev="0" class="curr"><span>商品</span></li>
+							<li rev="1"><span>店铺</span></li>
+
+						</ul>
+					</div>
+					<input autocomplete="off" onkeyup="lookup(this.value);" name="keywords" type="text" id="keyword" value="连衣裙" class="ecsc-search-input">
+					<input type="hidden" name="store_search_cmt" value="0">
+					<button type="submit" class="ecsc-search-button">搜索</button>
+				</form>
+				<div class="keyword">
+					<ul>
+						<li><a href="#" target="_blank">T恤</a></li>
+						<li><a href="#" target="_blank">短裤</a></li>
+						<li><a href="#" target="_blank">连衣裙</a></li>
+						<li><a href="#" target="_blank">套装</a></li>
+					</ul>
+				</div>
+
+				<div class="suggestions_box" id="suggestions" style="display:none;">
+					<div class="suggestions_list" id="auto_suggestions_list">
+						&nbsp;
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+		<div class="nav" id="nav">
+			<div class="w1200 clearfix">
+				<style type="text/css">
+					.nav-list .nav-item:first-child {
+						background: #f91b74 none repeat scroll 0 0;
+					}
+
+					.nav-list .nav-item:first-child a {
+						color: #fff;
+					}
+				</style>
+				<ul class="fl nav-list clearfix">
+					<li class="nav-item "><a href="http://127.0.0.1:8848/wyn/index.html">首页</a></li>
+					<li class="nav-item "><a href="http://127.0.0.1:8848/wyn/index-2.html">网红推荐</a></li>
+					<li class="nav-item "><a href="http://127.0.0.1:8848/wyn/index-3.html">明星同款</a></li>
+					<li class="nav-item "><a href="http://127.0.0.1:8848/wyn/index-4.html">四季特卖</a></li>
+					<li class="nav-item "><a href="http://127.0.0.1:8848/wyn/index-5.html">名店精选</a></li>
+				</ul>
+			</div>
+		</div>
+
+
+	<div class="index-banner w1200" id="J_banner" style="position: relative;">
+			<div class="index-slide" style="width: 1200px;">
+				<img width="1200" height="350" border="0" src="img/mdjx.jpg">
+			</div>
+		</div>
+
+	
+			<div class="floor-mod w1200 ppzk">
+				<div class="floor-title" style="text-align: center;">
+					<span class="main-title">名店精选</span>
+				</div>
+				<div class="floor-content">
+					<ul class="pp-list clearfix">
+						<li class="pp-item fl">
+							<a href="#">
+								<img class="pp-img" src="img/1540927927778695190.jpg">
+							</a>
+							<div class="pp-info clearfix">
+								<span class="pp-name">自然自我，意趣生活</span>
+								<span class="pp-shop">3F176</span>
+							</div>
+						</li>
+						<li class="pp-item fr">
+							<a href="#">
+								<img class="pp-img" src="img/1528308860078509734.jpg">
+							</a>
+							<div class="pp-info clearfix">
+								<span class="pp-name">自然自我，热爱生活</span>
+								<span class="pp-shop">0726</span>
+							</div>
+						</li>
+						<li class="pp-item fl">
+							<a href="#">
+								<img class="pp-img" src="img/1540927628959432339.jpg">
+							</a>
+							<div class="pp-info clearfix">
+								<span class="pp-name">温暖囤货，福利当先</span>
+								<span class="pp-shop">0746</span>
+							</div>
+						</li>
+						<li class="pp-item fr">
+							<a href="#">
+								<img class="pp-img" src="img/1540928367801682822.jpg">
+							</a>
+							<div class="pp-info clearfix">
+								<span class="pp-name">天使魅力，时尚女装</span>
+								<span class="pp-shop">3F158</span>
+							</div>
+						</li>
+
+					</ul>
+				</div>
+			</div>
+			
+			<div class="footer-promise">
+				<div class="w1200">
+					<div class="promise clearfix">
+						<a href="#" target="_blank"><span class="icon-promise promise02">品质保证</span></a>
+						<a href="#" target="_blank"><span class="icon-promise promise05">7天换货保障</span></a>
+						<a href="#" target="_blank"><span class="icon-promise promise06">批发折扣</span></a>
+						<a href="#" target="_blank"><span class="icon-promise promise07">一件代发</span></a>
+					</div>
+				</div>
+			</div>
+			<div class="footer">
+				<div class="w1200">
+					<div class="sjq-info">
+						<div class="foot_help clearfix" style="width:1200px;">
+							<dl>
+								<dt>权益保障</dt>
+								<dd><a href="#" title="安全保障和权益保护规则" target="_blank">安全保障和权益保护规则</a></dd>
+								<dd><a href="#" title="违规处理规则" target="_blank">违规处理规则</a></dd>
+								<dd><a href="#" title="退换货流程" target="_blank">退换货流程</a></dd>
+								<dd><a href="#" title="投诉维权" target="_blank">投诉维权</a></dd>
+							</dl>
+							<dl>
+								<dt>买家服务</dt>
+								<dd><a href="#" title="订单管理" target="_blank">订单管理</a></dd>
+								<dd><a href="#" title="交易规则" target="_blank">交易规则</a></dd>
+							</dl>
+							<dl>
+								<dt>卖家服务</dt>
+								<dd><a href="#" title="支付方式说明" target="_blank">支付方式说明</a></dd>
+								<dd><a href="#" title="商品上传指南" target="_blank">商品上传指南</a></dd>
+								<dd><a href="#" title="公司简介及投诉" target="_blank">公司简介及投诉</a></dd>
+							</dl>
+							<dl class="contact-us">
+								<dt>账户管理</dt>
+								<dd><a href="#" title="新手注册" target="_blank">新手注册</a></dd>
+								<dd><a href="#" title="找回密码" target="_blank">找回密码</a></dd>
+							</dl>
+						</div>
+						<div>
+
+							<p>
+								<span>服务热线：4006805876</span>
+								<a target="_blank" href="#" style="display:inline-block;text-decoration:none;"><img src="img/beian_icon.png"
+									 style="float:left;">浙公网安备 33010402001053号</a>
+								<span class="line">|</span>
+								<a href="#" style="display:inline-block;text-decoration:none;"><img src="img/gongshangju.png" style="width: 20px; height: 20px;float: left;">工商营业执照</a>
+								<span class="line">|</span>
+								增值电信业务经营许可证：浙B2-20170096
+							</p>
+
+
+							<p style="display:none">
+								<span>服务热线：4006805876</span>
+								<a target="_blank" href="#" style="display:inline-block;text-decoration:none;"><img src="img/beian_icon.png"
+									 style="float:left;">浙公网安备 33010402001053号</a>
+								<span>ICP备案证书号:<a href="#" target="_blank">SJQ000001</a></span>
+								<span class="line">|</span>
+								增值电信业务经营许可证：浙B2-20170096
+							</p>
+
+							<p style="display:none">共执行 124 个查询，用时 0.147444 秒，在线 140 人，Gzip 已禁用，占用内存 15.052 MB<img src="img/cron.php" alt=""
+								 style="width:0px;height:0px;"></p>
+							<p style="display:none;">
+							</p>
+							<p>
+								<script type="text/javascript">
+									copyright = new Date();
+									update = copyright.getFullYear();
+									document.write("Copyright@2017-" + update + " 四季青服装电子商务有限公司版权所有");
+								</script>
+							</p>
+						</div>
+					</div>
+				</div>
+
+			</div>
+	</body>
+</html>
+<script src="js/sjq.js" type="text/javascript" charset="utf-8"></script>
